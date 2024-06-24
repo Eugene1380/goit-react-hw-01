@@ -1,9 +1,9 @@
-import Transaction from '../Transaction/Transaction';
-import style from './TransactionHistory.module.css';
-export default function TransactionHistory({ items }) {
+import css from "./TransactionHistory.module.css";
+
+const TransactionHistory = ({ items }) => {
   return (
-    <table className={style.table}>
-      <thead className={style.head}>
+    <table className={css.transactionHistory}>
+      <thead>
         <tr>
           <th>Type</th>
           <th>Amount</th>
@@ -11,18 +11,19 @@ export default function TransactionHistory({ items }) {
         </tr>
       </thead>
 
-      <tbody className={style.tbody}>
-        {items.map(item => {
+      <tbody>
+        {items.map((item) => {
           return (
-            <Transaction
-              key={item.id}
-              type={item.type}
-              amount={item.amount}
-              currency={item.currency}
-            />
+            <tr key={item.id}>
+              <td>{item.type}</td>
+              <td>{item.amount}</td>
+              <td>{item.currency}</td>
+            </tr>
           );
         })}
       </tbody>
     </table>
   );
-}
+};
+
+export default TransactionHistory;

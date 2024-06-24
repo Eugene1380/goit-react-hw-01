@@ -1,59 +1,80 @@
-.card {
-  overflow: hidden;
-  background-color: white;
-  border: 6px solid black;
-  border-radius: 16px;
-  width: 750px;
-  color: black;
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin: 24px 0;
-}
-.user {
-  padding: 24px;
-}
-.avatar:hover {
-  transform: scale(1.05);
-  background-color: rgb(198, 219, 211);
-}
-.username {
-  margin-top: 12px;
-  margin-bottom: 12px;
-  font-size: 48px;
-  font-weight: 600;
-}
-.userTag,
-.userLocation {
-  margin: 0;
-  font-size: 42px;
-  font-weight: 400;
-  color: gray;
-}
-.avatar {
-  background-color: gray;
-  border-radius: 50%;
-  width: 300px;
-  transition: transform 350ms ease-in-out, background-color 350ms ease-in-out;
-}
-.list {
-  list-style-type: none;
-  background-color: rgb(223, 221, 221);
-  display: flex;
-  justify-content: space-around;
-  margin: 0;
-  padding: 0;
-  border-top: 4px solid gray;
-}
-.listItem {
+.profile {
+  width: 700px;
+  padding-top: 50px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
-  width: 250px;
-  font-size: 42px;
-  padding: 28px;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  color: #010101;
+  background-color: #ffffff;
+  border: solid 3px #010101;
+  border-radius: 24px;
+  margin: 10px auto;
 }
-.listItem:not(:first-child) {
-  border-left: 4px solid gray;
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 30px;
 }
-.listStat {
-  font-weight: 600;
+
+.image {
+  width: 300px;
+  border-radius: 50%;
+  background-color: #010101;
+}
+
+.name {
+  font-size: 50px;
+  margin: auto;
+  font-weight: bold;
+}
+
+.tag {
+  font-size: 45px;
+  color: #b0b0b0;
+  margin: auto;
+}
+
+.location {
+  font-size: 45px;
+  color: #b0b0b0;
+  margin: auto;
+}
+
+.stats {
+  display: flex;
+  margin: auto;
+  font-size: 30px;
+  padding-left: 0;
+}
+
+.statsItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 150px;
+  width: calc((700px - 14px) / 3);
+  background-color: #d3d3d3;
+  border: 3px solid #949494;
+}
+.statsItem:first-child {
+  border-radius: 0 0 0 22px;
+}
+.statsItem:last-child {
+  border-radius: 0 0 22px 0;
+}
+
+.label {
+  color: #010101;
+}
+
+.quantity {
+  font-weight: bold;
 }

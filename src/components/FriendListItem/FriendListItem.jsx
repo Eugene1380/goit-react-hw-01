@@ -1,14 +1,17 @@
-import style from './FriendListItem.module.css';
-export default function FriendListItem({ avatar, name, isOnline }) {
+import css from "./FriendListItem.module.css";
+
+const FriendListItem = ({ id, isOnline, avatar, name }) => {
   return (
-    <div className={style.listItem}>
-      <img className={style.image} src={avatar} alt={name} width="48"></img>
-      <p className={style.title}>{name}</p>
-      {isOnline ? (
-        <p className={style.Online}>Online</p>
-      ) : (
-        <p className={style.Offline}>Offline</p>
-      )}
+    <div className={css.item} key={id}>
+      <li>
+        <img className={css.avatar} src={avatar} alt="Avatar" width="48" />
+        <p className={css.name}>{name}</p>
+        {/* <p className={isOnline ? 'online' : 'offline'}>{isOnline ? 'Online' : 'Offline'}</p> */}
+        <p className={isOnline ? css.onlineStatus : css.offlineStatus}>
+          {isOnline ? "Online" : "Offline"}
+        </p>
+      </li>
     </div>
   );
-}
+};
+export default FriendListItem;
